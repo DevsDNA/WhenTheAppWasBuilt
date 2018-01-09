@@ -6,7 +6,7 @@ How many times have you said "when was this app built" or "which version affects
 
 ## How to use it
 
-Just three easy steps:
+Just four easy steps:
 
 1. Add [DevsDNA.WhenTheAppWasBuilt](https://www.nuget.org/packages/DevsDNA.WhenTheAppWasBuilt) NuGet to both your PCL and platform projects;
 
@@ -26,6 +26,6 @@ global::Xamarin.Forms.Forms.Init();
 DevsDNA.WhenTheAppWasBuilt.TellMeWhenShaking(typeof(WhenTheAppWasBuiltExample.App));
 ```
 
-3. Strongly shake your devices!
+4. Strongly shake your devices!
 
 *Pst!* Have a look to the [Examples](Examples/) folder to quickly see it running!
