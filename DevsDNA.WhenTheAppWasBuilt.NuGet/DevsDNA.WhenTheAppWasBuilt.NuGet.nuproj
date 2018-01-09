@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB3EC4AA-83A1-475D-AA65-41126F83E8EA}</ProjectGuid>
+    <Description>How many times have you said "when was this app built" or "which version affects this bug"? Forget those, from now on just strongly shake your device and we'll show you when the app was built. That simple.</Description>
+    <PackageId>DevsDNA.WhenTheAppWasBuilt</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Marcos Cobeña Morián</Authors>
+    <DevelopmentDependency>false</DevelopmentDependency>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>DevsDNA.WhenTheAppWasBuilt</RootNamespace>
+    <UsePartialTypes>false</UsePartialTypes>
+    <AssemblyName>DevsDNA.WhenTheAppWasBuilt.NuGet</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Owners>Marcos Cobeña Morián</Owners>
+    <Copyright>DevsDNA</Copyright>
+    <PackageReleaseNotes>Initial version.</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/DevsDNA/WhenTheAppWasBuilt</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/DevsDNA/WhenTheAppWasBuilt/blob/master/LICENSE</PackageLicenseUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <OutputPath>bin\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DevsDNA.WhenTheAppWasBuilt.Android\DevsDNA.WhenTheAppWasBuilt.Android.csproj">
+      <Project>{D46A35C9-0C32-4FBC-94DC-FF678CC989FA}</Project>
+      <Name>DevsDNA.WhenTheAppWasBuilt.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DevsDNA.WhenTheAppWasBuilt.iOS\DevsDNA.WhenTheAppWasBuilt.iOS.csproj">
+      <Project>{CA145ECE-7AF2-40AC-9471-F70B8B7C230C}</Project>
+      <Name>DevsDNA.WhenTheAppWasBuilt.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DevsDNA.WhenTheAppWasBuilt.Core\DevsDNA.WhenTheAppWasBuilt.Core.csproj">
+      <Project>{C3982885-70AA-4DCB-BBBB-76C2782905B4}</Project>
+      <Name>DevsDNA.WhenTheAppWasBuilt.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NuGet.Build.Packaging">
+      <Version>0.2.0</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets" Condition="Exists('$(NuGetAuthoringPath)\NuGet.Packaging.Authoring.targets')" />
+</Project>
