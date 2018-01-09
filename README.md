@@ -10,7 +10,7 @@ Just three easy steps:
 
 1. Add [DevsDNA.WhenTheAppWasBuilt](https://www.nuget.org/packages/DevsDNA.WhenTheAppWasBuilt) NuGet to both your PCL and platform projects;
 
-2. In your Android's `MainActivity` class, add the following line just after Xamarin.Forms init.:
+2. In your Android's `MainActivity` class, add the following line just after Xamarin.Forms init. —notice the passed `Type`, as such provides the actual date:
 
 ```c-sharp
 DevsDNA.WhenTheAppWasBuilt.TellMeWhenShaking(typeof(WhenTheAppWasBuiltExample.App));
