@@ -12,13 +12,13 @@ Just three easy steps:
 
 2. In your Android's `MainActivity` class, add the following line just after Xamarin.Forms init. —notice the passed `Type`, as such provides the actual date:
 
-```c-sharp
+```csharp
 DevsDNA.WhenTheAppWasBuilt.TellMeWhenShaking(typeof(WhenTheAppWasBuiltExample.App));
 ```
 
 3. The same goes for iOS' `AppDelegate` one:
 
-```c-sharp
+```csharp
 DevsDNA.WhenTheAppWasBuilt.TellMeWhenShaking(typeof(WhenTheAppWasBuiltExample.App));
 ```
 
