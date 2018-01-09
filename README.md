@@ -28,4 +28,4 @@ DevsDNA.WhenTheAppWasBuilt.TellMeWhenShaking(typeof(WhenTheAppWasBuiltExample.Ap
 
 3. Strongly shake your devices!
 
-*Pst!* Have a look to the [Examples](Examples/) folder to get some inspiration!
+*Pst!* Have a look to the [Examples](Examples/) folder to quickly see it running!
