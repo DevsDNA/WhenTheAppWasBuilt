@@ -8,10 +8,11 @@
     public class WhenTheAppWasBuilt : WhenTheAppWasBuiltCore
     {
         /// <summary>
-        /// Tells me when the app was built on a shake gesture.
+        /// Tells me when the app was built on a shake gesture. In most of the cases 
+        /// <paramref name="projectTypeToGatherBuildDate"/> is your own 
+        /// <see cref="Xamarin.Forms.Application"/> class.
         /// </summary>
-        /// <param name="projectTypeToGatherBuildDate">Project type to gather build date. In most of the cases this' 
-        /// your own Xamarin.Forms.Application class.</param>
+        /// <param name="projectTypeToGatherBuildDate">Project type to gather build date.</param>
         public static void TellMeWhenShaking(Type projectTypeToGatherBuildDate)
         {
             var version = projectTypeToGatherBuildDate.Assembly.GetName().Version;

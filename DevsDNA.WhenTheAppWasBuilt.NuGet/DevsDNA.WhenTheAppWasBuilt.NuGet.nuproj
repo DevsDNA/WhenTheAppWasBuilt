@@ -5,9 +5,11 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CB3EC4AA-83A1-475D-AA65-41126F83E8EA}</ProjectGuid>
-    <Description>How many times have you said "when was this app built" or "which version affects this bug"? Forget those, from now on just strongly shake your device and we'll show you when the app was built. That simple.</Description>
+    <Description>How many times have you said "when was this app built" or "which version affects this bug"? Forget those, from now on just strongly shake your device and we'll show you when the app was built. That simple.
+
+With Xamarin.Forms in mind, it also works on classical Xamarin.Android or Xamarin.iOS projects which share a common library.</Description>
     <PackageId>DevsDNA.WhenTheAppWasBuilt</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>Marcos Cobeña Morián</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -18,7 +20,9 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Owners>Marcos Cobeña Morián</Owners>
     <Copyright>DevsDNA</Copyright>
-    <PackageReleaseNotes>Initial version.</PackageReleaseNotes>
+    <PackageReleaseNotes>- Slightly improved alert with self-explanatory emojis to avoid language mixing
+- Enabled AOS (ahead-of-shake) mode to show the alert on demand
+- Documented API a little bit</PackageReleaseNotes>
     <PackageProjectUrl>https://github.com/DevsDNA/WhenTheAppWasBuilt</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/DevsDNA/WhenTheAppWasBuilt/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>

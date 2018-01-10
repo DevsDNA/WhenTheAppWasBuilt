@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:WhenTheAppWasBuiltExample" x:Class="WhenTheAppWasBuiltExample.WhenTheAppWasBuiltExamplePage">
-	<Label Text="Shake me!" VerticalOptions="Center" HorizontalOptions="Center" />
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:WhenTheAppWasBuiltExample" 
+    x:Class="WhenTheAppWasBuiltExample.WhenTheAppWasBuiltExamplePage">
+    <AbsoluteLayout>
+	    <Label 
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="0.5, 0.5, AutoSize, AutoSize"
+            FontAttributes="Bold, Italic"
+            Text="Shake me!" />
+
+        <Button x:Name="versionButton"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds="1, 1, AutoSize, AutoSize"
+            Margin="16"
+            Text="Or press me!"
+            Clicked="Handle_Clicked" />
+    </AbsoluteLayout>
 </ContentPage>

@@ -12,6 +12,9 @@
     /// </summary>
     public abstract class WhenTheAppWasBuiltCore
     {
+        const string OKCaption = "OK";
+        const string TitleCaption = "🔨🗓";
+
         static readonly Func<int> GetDistanceThreeshold = () =>
         {
             int threeshold;
@@ -38,6 +41,18 @@
         /// </summary>
         /// <value>The build date.</value>
         public static DateTime BuildDate { get; private set; }
+
+        /// <summary>
+        /// Displays the build date alert.
+        /// </summary>
+        public static async void DisplayBuildDateAlert()
+        {
+            var mainPage = Application.Current.MainPage;
+            var buildDate = BuildDate.ToString("f");
+            alreadyDisplaying = true;
+            await mainPage?.DisplayAlert(TitleCaption, buildDate, OKCaption);
+            alreadyDisplaying = false;
+        }
 
         /// <summary>
         /// Gathers the date time from.
@@ -90,15 +105,6 @@
 
                 lastMotionVectors.Clear();
             }
-        }
-
-        static async void DisplayBuildDateAlert()
-        {
-            var mainPage = Application.Current.MainPage;
-            var buildDate = BuildDate.ToString("f");
-            alreadyDisplaying = true;
-            await mainPage?.DisplayAlert(null, $"Built on {buildDate}", "OK");
-            alreadyDisplaying = false;
         }
     }
 }

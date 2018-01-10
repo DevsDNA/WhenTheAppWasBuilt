@@ -8,5 +8,11 @@ namespace WhenTheAppWasBuiltExample
         {
             InitializeComponent();
         }
+
+        void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            // You can also force the alert whenever you want!
+            DevsDNA.WhenTheAppWasBuiltCore.DisplayBuildDateAlert();
+        }
     }
 }
