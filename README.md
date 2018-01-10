@@ -30,4 +30,14 @@ DevsDNA.WhenTheAppWasBuilt.TellMeWhenShaking(typeof(WhenTheAppWasBuiltExample.Ap
 
 4. Strongly shake your devices!
 
+### Ahead-of-shake (AOS) support
+
+You don't have to force customers to shake their devices if don't want to, simply call
+
+```csharp
+DevsDNA.WhenTheAppWasBuiltCore.DisplayBuildDateAlert();
+```
+
+from wherever you want.
+
 *Pst!* Have a look to the [Examples](Examples/) folder to quickly see it running!
