@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using DeviceMotion.Plugin;
-using DeviceMotion.Plugin.Abstractions;
-using Xamarin.Forms;
-
-namespace DevsDNA
+﻿namespace DevsDNA
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using DeviceMotion.Plugin;
+    using DeviceMotion.Plugin.Abstractions;
+    using Xamarin.Forms;
+
+    /// <summary>
+    /// When the app was built core.
+    /// </summary>
     public abstract class WhenTheAppWasBuiltCore
     {
         static readonly Func<int> GetDistanceThreeshold = () =>
@@ -30,8 +33,16 @@ namespace DevsDNA
 		static bool alreadyDisplaying;
         static List<MotionVector> lastMotionVectors = new List<MotionVector>();
 
+        /// <summary>
+        /// Gets the build date.
+        /// </summary>
+        /// <value>The build date.</value>
         public static DateTime BuildDate { get; private set; }
 
+        /// <summary>
+        /// Gathers the date time from.
+        /// </summary>
+        /// <param name="version">Version.</param>
         protected static void GatherDateTimeFrom(Version version)
 		{
 			var buildDateTime = new DateTime(2000, 1, 1).Add(new TimeSpan(
@@ -41,6 +52,9 @@ namespace DevsDNA
             BuildDate = buildDateTime;
 		}
 
+        /// <summary>
+        /// Init this instance.
+        /// </summary>
         protected static void Init()
         {
             CrossDeviceMotion.Current.Start(MotionSensorType.Accelerometer);
