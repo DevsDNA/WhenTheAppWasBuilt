@@ -10,6 +10,12 @@ With Xamarin.Forms in mind, it also works on classical Xamarin.Android or Xamari
 
 Just four easy steps:
 
+❗️ In order to detect the correct date you must leave the compiler to autoincrement the `AssemblyVersion` Build and Revision numbers. Double check your AssemblyInfo.cs —it's usually placed here— contains the following line:
+
+```csharp
+[assembly: AssemblyVersion("1.0.*")]
+```
+
 1. Add [DevsDNA.WhenTheAppWasBuilt](https://www.nuget.org/packages/DevsDNA.WhenTheAppWasBuilt) NuGet to both your PCL and platform projects;
 
 2. In your Android's `MainActivity` class, add the following line just after Xamarin.Forms init. —pass whatever `Type` located at your core project (as the main `App` for instance), since such provides the actual date:
