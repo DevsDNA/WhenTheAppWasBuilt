@@ -1,6 +1,6 @@
 # WhenTheAppWasBuilt
 
-How many times have you said "when was this app built" or "which version affects this bug"? Forget those, from now on just strongly shake your device and we'll show you when the app was built. That simple. [![NuGet](https://img.shields.io/nuget/v/Xam.Plugin.Battery.svg?label=NuGet)](https://www.nuget.org/packages/DevsDNA.WhenTheAppWasBuilt)
+How many times have you said "when was this app built" or "which version affects this bug"? Forget those, from now on just strongly shake your device and we'll show you when the app was built. That simple. [![NuGet](https://img.shields.io/nuget/v/DevsDNA.WhenTheAppWasBuilt.svg?label=NuGet)](https://www.nuget.org/packages/DevsDNA.WhenTheAppWasBuilt)
 
 With Xamarin.Forms in mind, it also works on classical Xamarin.Android or Xamarin.iOS projects which share a common library.
 
